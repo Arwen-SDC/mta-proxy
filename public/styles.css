@@ -1,45 +1,53 @@
-*{
-  box-sizing: border-box;
-}
-
 #container {
+  font-family: Montserrat,sans-serif;
   margin: auto;
   display: grid;
   grid-template-areas:
-    "title"
-    "bar"
+    "menu"
     "top"
     "details"
     "recommended"
     "reviews";
 }
 
+#mainTitle {
+  text-align: center;
+  font-weight: 900!important;
+  font-size: 80px;
+  margin: 0%;
+}
+
+#selectionBar{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto repeat(8, 10%) auto;
+  border-bottom: 2px solid #dbdbdb;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0,
+  0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.19);
+}
+
+#red {
+  color: #DA3625;
+}
+
+.mid {
+  align-self: center;
+  justify-self: center;
+}
+
+.mid:hover {
+  color: #DA3625;
+}
 
 #top{
   grid-area: top;
   max-width: 1280;
   display: grid;
   grid-template-areas:
-  "carousel"
-  "addtocart";
+  "carousel addtocart";
+  margin: auto;
   margin-bottom: 30px;
-}
-
-@media (min-width: 800px) {
-  #top{
-    grid-template-columns: 3fr 2fr;
-    grid-template-areas:
-    "carousel addtocart";
-    margin: auto;
-  }
-
-  #carousel {
-    justify-self: center;
-  }
-
-  #addToCart {
-    justify-self: center!important;
-  }
+  margin-top: 30px;
 }
 
 #carousel {
@@ -66,48 +74,4 @@
 
 #reviews {
   grid-area: reviews;
-}
-
-#mainTitle {
-  grid-area: title;
-  text-align: center;
-  font-weight: 900!important;
-  font-family: Montserrat,sans-serif;
-  font-size: 80px;
-  margin: 0%;
-}
-
-#red {
-  color: #DA3625;
-}
-
-#selectionBar{
-  font-family: Montserrat,sans-serif;
-  font-size: 14px;
-  max-width: 1280px;
-  grid-area: bar;
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto repeat(8, 1fr) auto;
-  border-bottom: 2px solid #dbdbdb;
-  box-shadow: 0px 0px 0px 0px rgba(0, 0,
-  0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.19);
-  margin: auto;
-  margin-bottom: 20px;
-
-}
-
-@media (max-width: 1280px) {
-  #selectionBar{
-    display: none;
-  }
-}
-
-.mid {
-  align-self: center;
-  justify-self: center;
-}
-
-.mid:hover {
-  color: #DA3625;
 }

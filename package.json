@@ -1,31 +1,30 @@
 {
-  "name": "proxy-a-tiller",
+  "name": "details-proxy",
   "version": "1.0.0",
-  "description": "Proxy for FEC",
-  "main": "server/index.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev-start": "nodemon server/index.js --ignore 'public/'",
-    "start": "node server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "art": "artillery run artillery.yml"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Team-Aragorn/proxy-a-tiller.git"
+    "url": "git+https://github.com/Team-Aragorn/details-proxy.git"
   },
-  "author": "Adam Tiller",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Team-Aragorn/proxy-a-tiller/issues"
+    "url": "https://github.com/Team-Aragorn/details-proxy/issues"
   },
-  "homepage": "https://github.com/Team-Aragorn/proxy-a-tiller#readme",
+  "homepage": "https://github.com/Team-Aragorn/details-proxy#readme",
   "dependencies": {
+    "artillery": "^1.6.0",
     "axios": "^0.19.2",
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2"
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.4",
+    "newrelic": "^6.8.0",
+    "nodemon": "^2.0.4"
   }
 }
